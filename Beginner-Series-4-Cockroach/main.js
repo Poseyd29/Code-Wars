@@ -5,6 +5,4 @@ function cockroachSpeed(s) {
     const cps = kiloPerMinute / 60
 
     return Math.floor(cps)
-
-
 }
