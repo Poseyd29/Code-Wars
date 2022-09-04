@@ -5,12 +5,11 @@ function barista(coffees) {
     var sum = 0;
     var coffees = coffees.sort(function (a, b) { return a - b; });
     console.log(coffees);
-    coffees.reduce(
-        (previousValue, currentValue, currentIndex) => {
-            var waitTime = currentIndex < 1 ? currentValue : previousValue + currentValue + 2;
-            console.log(waitTime);
-            sum += waitTime;
-            return waitTime;
-        }, 0);
+    coffees.reduce((previousValue, currentValue, currentIndex) => {
+        var waitTime = currentIndex < 1 ? currentValue : previousValue + currentValue + 2;
+        console.log(waitTime);
+        sum += waitTime;
+        return waitTime;
+    }, 0);
     return sum;
 }
